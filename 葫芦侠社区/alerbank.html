@@ -1,0 +1,144 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://huluxia_activities.gitee.io/content/tets/rem.js"></script>
+	
+<title>Drag Arrange Example</title>
+
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	border: 1px solid;
+	}
+      body {
+        font-family: arial;
+        background: rgb(242, 244, 246);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      h3 {
+        color: rgb(199, 204, 209);
+        font-size: 28px;
+        text-align: center;
+      }
+
+      #elements-container {
+        text-align: center;
+      }
+
+      .draggable-element {
+     float: left;
+    width: 3rem;
+    height: .6rem;
+    background: white;
+    border: 1px solid rgb(196, 196, 196);
+    text-align: center;
+    color: rgb(51, 51, 51);
+    font-size: .2rem;
+    cursor: move;
+      }
+
+      .drag-list {
+      
+        margin: 0 auto;
+      }
+
+      .drag-list > li {
+       list-style: none;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(196, 196, 196);
+    font-size: .2rem;
+      }
+
+      .drag-list .title {
+        display: inline-block;
+        width: 130px;
+        padding: 6px 6px 6px 12px;
+        vertical-align: top;
+      }
+
+      .drag-list .drag-area {
+        display: inline-block;
+        background: rgb(158, 211, 179);
+        width: 60px;
+        height: 40px;
+        vertical-align: top;
+        float: right;
+        cursor: move;
+      }
+
+      .code {
+				clear: both;
+           background: rgb(255, 255, 255);
+    border: 1px solid rgb(196, 196, 196);
+    position: relative;
+      }
+
+      .code::before {
+        content: 'Code';
+        background: rgb(80, 80, 80);
+        width: 96%;
+        position: absolute;
+        padding: 8px 2%;
+        color: rgb(255, 255, 255);
+      }
+      
+      .code pre {
+     margin-top: 2rem;
+      }
+
+    </style>
+</head>
+<body>
+<section class="showcase showcase-1">
+<h3>Example 1</h3>
+<div id="elements-container">
+<div class="draggable-element d-1">Drag 1</div>
+<div class="draggable-element d-2">Drag 2</div>
+<div class="draggable-element d-3">Drag 3</div>
+<div class="draggable-element d-4">Drag 4</div>
+<div class="draggable-element d-1">Drag 1</div>
+<div class="draggable-element d-2">Drag 2</div>
+<div class="draggable-element d-3">Drag 3</div>
+<div class="draggable-element d-4">Drag 4</div>
+<div class="draggable-element d-1">Drag 1</div>
+<div class="draggable-element d-2">Drag 2</div>
+<div class="draggable-element d-3">Drag 3</div>
+<div class="draggable-element d-4">Drag 4</div>
+<div class="draggable-element d-1">Drag 1</div>
+<div class="draggable-element d-2">Drag 2</div>
+<div class="draggable-element d-3">Drag 3</div>
+<div class="draggable-element d-4">Drag 4</div>
+</div>
+</section>
+<section class="code">
+<pre>$('.draggable-element').arrangeable();
+      </pre>
+</section>
+<section class="showcase showcase-2">
+<h3>Example 2</h3>
+<ul class="drag-list">
+<li><span class="title">list 1</span><span class="drag-area"></span></li>
+<li><span class="title">list 2</span><span class="drag-area"></span></li>
+<li><span class="title">list 3</span><span class="drag-area"></span></li>
+<li><span class="title">list 4</span><span class="drag-area"></span></li>
+<li><span class="title">list 5</span><span class="drag-area"></span></li>
+<li><span class="title">list 6</span><span class="drag-area"></span></li>
+<li><span class="title">list 7</span><span class="drag-area"></span></li>
+
+</ul>
+</section>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="http://www.jq22.com/demo/jquery-dragarrange201702240030/drag-arrange.js"></script>
+<script type="text/javascript">
+      $(function() {
+          $('.draggable-element').arrangeable();
+          $('li').arrangeable({dragSelector: '.drag-area'});
+      });
+    </script>
+</body>
+</html>
